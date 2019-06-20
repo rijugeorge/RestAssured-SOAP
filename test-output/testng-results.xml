@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1981" started-at="2019-06-19T13:11:28Z" finished-at="2019-06-19T13:11:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1981" started-at="2019-06-19T13:11:28Z" finished-at="2019-06-19T13:11:30Z">
+      <class name="OD_PS_Automation.RestAssured_SAOP.App">
+        <test-method status="PASS" signature="AuthenticateTest()[pri:0, instance:OD_PS_Automation.RestAssured_SAOP.App@66d2e7d9]" name="AuthenticateTest" duration-ms="1968" started-at="2019-06-19T09:11:28Z" finished-at="2019-06-19T09:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuthenticateTest -->
+      </class> <!-- OD_PS_Automation.RestAssured_SAOP.App -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
