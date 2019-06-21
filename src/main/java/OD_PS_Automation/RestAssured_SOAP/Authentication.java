@@ -12,7 +12,7 @@ import io.restassured.RestAssured;
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
-//import sun.misc.IOUtils;
+
 
 /**
  * Hello world!
@@ -36,10 +36,10 @@ public class Authentication
 		FileInputStream fileinput = new FileInputStream("C:\\Users\\riju.george\\eclipse-workspace\\RestAssured-SAOP\\src\\main\\java\\global.properties");
 		prop.load(fileinput);
 		
-		String URI = prop.getProperty("api.authenticateURL", "https://webservices.sandbox.orderdynamics.net");
-		String servicePath = prop.getProperty("api.authenticateServicePath", "/AuthenticationService.svc");
-		String storeID = prop.getProperty("api.storeId", "Test123");
-		String accessKey = prop.getProperty("api.accessKey", "Test123");
+		String URI = prop.getProperty("automation.api.authenticateURL", "https://webservices.sandbox.orderdynamics.net");
+		String servicePath = prop.getProperty("automation.api.authenticateServicePath", "/AuthenticationService.svc");
+		String storeID = prop.getProperty("automation.api.storeId", "Test123");
+		String accessKey = prop.getProperty("automation.api.accessKey", "Test123");
 
         String xml_text = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">" + 
         		"   <soapenv:Header/><soapenv:Body><tem:Authenticate><tem:storeId>"+ storeID + 

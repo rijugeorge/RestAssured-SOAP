@@ -29,7 +29,7 @@ public class AutomationLab {
 		final Enumeration<String> enums = (Enumeration<String>) prop.propertyNames();
 		while (enums.hasMoreElements()) {
 			final String key = enums.nextElement();
-			if (key.trim().startsWith("//")) {
+			if (key.trim().startsWith("//") || key.trim().startsWith("#")) {
 				prop.remove(key);
 			} else {
 				final String value = prop.getProperty(key);
@@ -39,13 +39,13 @@ public class AutomationLab {
 			}
 		}
 
-		if ((prop.getProperty("api.test")).trim().toLowerCase().equals("true")) {
+		if ((prop.getProperty("automation.api.test")).trim().toLowerCase().equals("true")) {
 
-			if ((prop.getProperty("api.authenticateURL") == null)
-					|| (prop.getProperty("api.authenticateServicePath") == null)
-					|| (prop.getProperty("api.storeId") == null) || (prop.getProperty("api.accessKey") == null)) {
+			if ((prop.getProperty("automation.api.authenticateURL") == null)
+					|| (prop.getProperty("automation.api.authenticateServicePath") == null)
+					|| (prop.getProperty("automation.api.storeId") == null) || (prop.getProperty("api.accessKey") == null)) {
 				logger.error(
-						"Missing one or more global configurations \"api.authenticateURL\" OR  \"api.authenticateServicePath\" OR \"api.storeId\" OR \"api.accessKey\"");
+						"Missing one or more global configurations \"automation.api.authenticateURL\" OR  \"automation.api.authenticateServicePath\" OR \"automation.api.storeId\" OR \"automation.api.accessKey\"");
 			}
 
 		} else {
