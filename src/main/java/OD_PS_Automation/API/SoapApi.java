@@ -1,6 +1,6 @@
 package OD_PS_Automation.API;
 
-public class SoapApi implements WebApi{
+public class SoapApi implements WebApiBase{
 	
 	String URI;
 
@@ -14,23 +14,5 @@ public class SoapApi implements WebApi{
 		
 	}
 
-	public void sendResponseXML() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void formRequestJson() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void sendResponsejson() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	public void sayhi() {
-		
-	}
 
 }
