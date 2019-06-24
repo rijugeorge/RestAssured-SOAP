@@ -7,6 +7,6 @@ public interface ParamResolverBase {
 	public String paramResolverType = "";
 	public String paramResolvedValue = "";
 	
-	public String getResolvedParam();
+	public String getResolvedParam( String paramName, String paramResolverType);
 
 }
