@@ -7,12 +7,16 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+import OD_PS_Automation.APIPayloads.ParamResolverFactory;
+
 public class AutomationLab {
 	final Logger logger = Logger.getLogger("OD_PS_Automation.AutomationLab");
-
+	Properties cloneproperty = new Properties();
+	ParamResolverFactory prfactory = new ParamResolverFactory();
 	public static void main(final String[] args) throws IOException {
 
 		final AutomationLab aL = new AutomationLab();
+		//Properties cloneproperty = new Properties();
 	}
 
 	public AutomationLab() throws IOException {
@@ -22,6 +26,20 @@ public class AutomationLab {
 				"C:\\Users\\riju.george\\eclipse-workspace\\RestAssured-SOAP\\src\\main\\java\\global.properties");
 		prop.load(fileinput);
 		validateGlobalProperty(prop);
+		Properties cloneproperty = createGlobalPropertyCopy(prop);
+		
+	}
+
+	private Properties createGlobalPropertyCopy(Properties prop) {
+		// TODO Auto-generated method stub
+		
+		//Properties newProps = new Properties();
+		prop.forEach((key, value) -> {
+			cloneproperty.setProperty((String) key, (String) value);
+		});
+		
+		return cloneproperty;
+		
 	}
 
 	private void validateGlobalProperty(final Properties prop) {

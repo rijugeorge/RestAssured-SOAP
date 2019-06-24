@@ -8,5 +8,5 @@ public interface ParamResolverBase {
 	public String paramResolvedValue = "";
 	
 	public String getResolvedParam( String paramName, String paramResolverType);
-
+    public void setParam( String paramScope, String paramName, String paramResolverType);
 }
