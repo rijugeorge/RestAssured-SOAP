@@ -16,7 +16,7 @@ public class AutomationLab {
 	public static void main(final String[] args) throws IOException {
 
 		final AutomationLab aL = new AutomationLab();
-		//Properties cloneproperty = new Properties();
+
 	}
 
 	public AutomationLab() throws IOException {
